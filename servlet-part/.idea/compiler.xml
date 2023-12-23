@@ -8,6 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demo1-servlet" />
         <module name="demo02-servlet" />
+        <module name="demo04-servlet" />
+        <module name="demo05-servlet" />
+        <module name="demo03-servlet" />
+        <module name="demo06-servlet" />
       </profile>
     </annotationProcessing>
   </component>

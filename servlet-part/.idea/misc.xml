@@ -6,6 +6,10 @@
       <list>
         <option value="$PROJECT_DIR$/demo1-servlet/pom.xml" />
         <option value="$PROJECT_DIR$/demo02-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/demo03-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/demo04-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/demo05-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/demo06-servlet/pom.xml" />
       </list>
     </option>
   </component>
