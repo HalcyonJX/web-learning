@@ -36,7 +36,7 @@ Servlet为不同的JavaWeb服务器规定了响应的规范编程，它屏蔽了
 
 下载插件JBLJavaToWeb。
 
-![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-22_21-10-08.png)
+![img](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img/Snipaste_2023-12-22_21-10-08.png)
 
 下载插件smart tomcat 方便部署
 
