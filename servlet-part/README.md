@@ -36,7 +36,7 @@ Servlet为不同的JavaWeb服务器规定了响应的规范编程，它屏蔽了
 
 下载插件JBLJavaToWeb。
 
-![](Servlet-img\Snipaste_2023-12-22_21-10-08.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-22_21-10-08.png)
 
 下载插件smart tomcat 方便部署
 
@@ -149,9 +149,9 @@ public class UserServlet extends HttpServlet {
 
 > 运行项目
 
-![](Servlet-img\Snipaste_2023-12-23_00-50-54.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_00-50-54.png)
 
-![](Servlet-img\Snipaste_2023-12-23_00-51-09.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_00-51-09.png)
 
 # 三、Servlet注解方式配置
 
@@ -459,7 +459,7 @@ public class ServletB extends HttpServlet {
 
 + 请求调试
 
-![](G:\Blog\JavaWeb\Servlet-img\Snipaste_2023-12-23_13-08-00.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_13-08-00.png)
 
 ## 6.2 ServletContext的使用
 
@@ -470,7 +470,7 @@ public class ServletB extends HttpServlet {
 + ServletContext对象为所有的Servlet所共享
 + ServletContext可以为所有的Servlet提供初始配置参数
 
-![](Servlet-img\Snipaste_2023-12-23_13-10-36.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_13-10-36.png)
 
 > ServletContext怎么用
 
@@ -670,7 +670,7 @@ String contextPath = servletContext.getContextPath();
 
 > 逻辑图
 
-![](G:\Blog\JavaWeb\Servlet-img\Snipaste_2023-12-23_13-33-50.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_13-33-50.png)
 
 > 请求转发特点(背诵)
 
@@ -685,7 +685,7 @@ String contextPath = servletContext.getContextPath();
 
 > 请求转发测试代码
 
-![](Servlet-img\Snipaste_2023-12-23_13-39-34.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_13-39-34.png)
 
 + ServletA
 
@@ -743,7 +743,7 @@ http://localhost:8080/demo05-servlet/servletA?username=halcyon
 
 > 响应重定向运行逻辑图
 
-![](G:\Blog\JavaWeb\Servlet-img\Snipaste_2023-12-23_13-53-30.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_13-53-30.png)
 
 > 响应重定向特点(背诵)
 
@@ -758,7 +758,7 @@ http://localhost:8080/demo05-servlet/servletA?username=halcyon
 
 > 响应重定向测试代码
 
-![](Servlet-img\Snipaste_2023-12-23_14-09-15.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_14-09-15.png)
 
 + ServletA
 
@@ -846,11 +846,11 @@ http://localhost:8080/demo05-servlet/servletA?username=halcyon
 
 + 非前后端分离的MVC
 
-![](Servlet-img\Snipaste_2023-12-23_14-19-12.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_14-19-12.png)
 
 + 前后端分离的MVC
 
-![](Servlet-img\Snipaste_2023-12-23_14-19-18.png)
+![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_14-19-18.png)
 
 
 
