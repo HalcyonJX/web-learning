@@ -149,9 +149,9 @@ public class UserServlet extends HttpServlet {
 
 > 运行项目
 
-![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_00-50-54.png)
+![sad](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_00-50-54.png)
 
-![](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_00-51-09.png)
+![dsada](https://github.com/HalcyonJX/web-learning/blob/main/servlet-part/Servlet-img\Snipaste_2023-12-23_00-51-09.png)
 
 # 三、Servlet注解方式配置
 
