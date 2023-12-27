@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/demo01-cookie/pom.xml" />
         <option value="$PROJECT_DIR$/demo02-session/pom.xml" />
+        <option value="$PROJECT_DIR$/demo03-filter/pom.xml" />
+        <option value="$PROJECT_DIR$/demo04-filter/pom.xml" />
       </list>
     </option>
   </component>
