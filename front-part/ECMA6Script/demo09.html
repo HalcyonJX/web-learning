@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 浅拷贝
+        let arr = ['java','c','python']
+        let person = {
+            name:'张三',
+            language:arr
+        }
+        //浅拷贝，person2和person指向相同的内存
+        let person2 = person
+        person2.name = "小帅"
+        console.log(person.name)
+        // 深拷贝
+        //通过JSON和字符串的转换形成一个新的对象
+        let person3 = JSON.parse(JSON.stringify(person))
+        person3.name="zzj"
+        console.log(person.name)
+        console.log(person3.name)
+    </script>
+</body>
+</html>

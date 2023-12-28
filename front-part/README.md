@@ -18,7 +18,7 @@
 + axios                   ajax异步请求封装技术实现前后端数据交互
 + Element-plus     可以提供丰富的快速构建网页的组件仓库              
 
-## 二、ECMA6Script
+# 二、ECMA6Script
 
 ## 2.1 es6简介
 
@@ -321,6 +321,307 @@
         console.log(person)
     </script>
 ```
+
+## 2.5 es6的对象创建和拷贝
+
+### 2.5.1 对象创建的语法糖
+
+> ES6中新增了对象创建的语法糖,支持了class extends constructor等关键字,让ES6的语法和面向对象的语法更加接近
+
+```html
+    <script>
+        class Person{
+            //属性
+            #n;
+            age;
+            get name(){
+                return this.n;
+            }
+            set name(n){
+                this.n = n;
+            }
+            //实例方法
+            eat(food){
+                console.log(this.age+"岁的"+this.n+"用筷子吃"+food)
+            }
+            //静态方法
+            static sum(a,b){
+                return a+b
+            }
+            //构造器
+            constructor(name,age){
+                this.n = name;
+                this.age = age;
+            }
+        }
+        let person = new Person("张三",10)
+        //访问对象属性
+        //调用对象方法
+        console.log(person.name)
+        console.log(person.n)
+        person.name = "小明"
+        person.eat("火锅")
+        console.log(Person.sum(100,200))
+
+        class Student extends Person{
+            grade;
+            score;
+            study(){}
+            constructor(name,age){
+                super(name,age)
+            }
+        }
+        let stu = new Student("学生小李",19)
+        stu.eat("面条")
+        stu.grade = 2
+        console.log(stu.grade)
+    </script>
+```
+
+### 2.5.2 对象的深拷贝和浅拷贝
+
+> 对象的拷贝,快速获得一个和已有对象相同的对象的方式
+
+```javascript
+        // 浅拷贝
+        let arr = ['java','c','python']
+        let person = {
+            name:'张三',
+            language:arr
+        }
+        //浅拷贝，person2和person指向相同的内存
+        let person2 = person
+        person2.name = "小帅"
+        console.log(person.name)
+        // 深拷贝
+        //通过JSON和字符串的转换形成一个新的对象
+        let person3 = JSON.parse(JSON.stringify(person))
+        person3.name="zzj"
+        console.log(person.name)
+        console.log(person3.name)
+```
+
+## 2.6 es6的模块化处理
+
+### 2.6.1模块化介绍
+
+> 模块化是一种组织和管理前端代码的方式，将代码拆分成小的模块单元，使得代码更易于维护、扩展和复用。它包括了定义、导出、导入以及管理模块的方法和规范。前端模块化的主要优势如下：
+
+1.  提高代码可维护性：通过将代码拆分为小的模块单元，使得代码结构更为清晰，可读性更高，便于开发者阅读和维护。
+2.  提高代码可复用性：通过将重复使用的代码变成可复用的模块，减少代码重复率，降低开发成本。
+3.  提高代码可扩展性：通过模块化来实现代码的松耦合，便于更改和替换模块，从而方便地扩展功能。
+
+> 目前，前端模块化有多种规范和实现，包括 CommonJS、AMD 和 ES6 模块化。ES6 模块化是 JavaScript 语言的模块标准，使用 import 和 export 关键字来实现模块的导入和导出。现在，大部分浏览器都已经原生支持 ES6 模块化，因此它成为了最为广泛使用的前端模块化标准. `
+
++ ES6模块化的几种暴露和导入方式
+  1. 分别导出
+  2. 统一导出
+  3. 默认导出
++ `ES6中无论以何种方式导出,导出的都是一个对象,导出的内容都可以理解为是向这个对象中添加属性或者方法`
+
+### 2.6.2 分别导出
+
++ module.js 向外分别暴露成员
+
+```javascript
+//1.分别暴露
+//模块想对外导出，添加export关键字即可
+
+//导出一个变量
+export const PI = 3.14
+//导出一个函数
+export function sum(a,b){
+    return a+b
+}
+//导出一个类
+export class Person{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    sayHello(){
+        console.log(`Hello,my name is ${this.name},I'm ${this.age} years old`)
+    }
+}
+```
+
++ app.js 导入module.js中的成员
+
+```javascript
+/*
+    *代表module.js 中所有的成员
+    m1代表所有成员所属的对象
+*/
+import * as m1 from './module.js'
+//使用暴露的属性
+console.log(m1.PI)
+//调用暴露的方法
+console.log(m1.sum(100,299))
+//调用暴露的类
+let person = new m1.Person('hsp',50)
+person.sayHello()
+```
+
++ index.html作为程序启动的入口  导入 app.js 
+
+```html
+    <!-- 导入JS文件，添加type='module'属性，否则不支持es6的模块化 -->
+    <script src="./app.js" type="module"></script>
+```
+
+### 2.6.3 统一导出
+
++ module.js向外统一导出成员
+
+```javascript
+//2.统一暴露
+// 模块想对外导出,export统一暴露想暴露的内容!
+// 定义一个常量
+const PI = 3.14
+// 定义一个函数
+function sum(a, b) {
+  return a + b;
+}
+// 定义一个类
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  sayHello() {
+    console.log(`Hello, my name is ${this.name}, I'm ${this.age} years old.`);
+  }
+}
+// 统一对外导出(暴露)
+export {
+	PI,
+    sum,
+    Person
+}
+```
+
++ app.js导入module.js中的成员
+
+```javascript
+/* 
+    {}中导入要使用的来自于module.js中的成员
+    {}中导入的名称要和module.js中导出的一致,也可以在此处起别名
+    {}中如果定义了别名,那么在当前模块中就只能使用别名
+    {}中导入成员的顺序可以不是暴露的顺序
+    一个模块中可以同时有多个import
+    多个import可以导入多个不同的模块,也可以是同一个模块
+*/
+//import {PI ,Person ,sum }  from './module.js'
+//import {PI as pi,Person as People,sum as add}  from './module.js'
+import {PI ,Person ,sum,PI as pi,Person as People,sum as add}  from './module.js'
+// 使用暴露的属性
+console.log(PI)
+console.log(pi)
+// 调用暴露的方法
+let result1 =sum(10,20)
+console.log(result1)
+let result2 =add(10,20)
+console.log(result2)
+// 使用暴露的Person类
+let person1 =new Person('张三',10)
+person1.sayHello()
+let person2 =new People('李四',11)
+person2.sayHello()
+```
+
+### 2.6.4 默认导出
+
++ modules混合向外导出
+
+```javascript
+// 3默认和混合暴露
+/* 
+    默认暴露语法  export default sum
+    默认暴露相当于是在暴露的对象中增加了一个名字为default的属性
+    三种暴露方式可以在一个module中混合使用
+
+*/
+export const PI = 3.14
+// 导出一个函数
+function sum(a, b) {
+  return a + b;
+}
+// 导出一个类
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  sayHello() {
+    console.log(`Hello, my name is ${this.name}, I'm ${this.age} years old.`);
+  }
+}
+
+// 导出默认
+export default sum
+// 统一导出
+export {
+   Person
+}
+```
+
++ app.js 的default和其他导入写法混用
+
+```javascript
+/* 
+    *代表module.js中的所有成员
+    m1代表所有成员所属的对象
+*/
+import * as m1 from './module.js'
+import {default as add} from './module.js' // 用的少
+import add2 from './module.js' // 等效于 import {default as add2} from './module.js'
+
+// 调用暴露的方法
+let result =m1.default(10,20)
+console.log(result)
+let result2 =add(10,20)
+console.log(result2)
+let result3 =add2(10,20)
+console.log(result3)
+
+// 引入其他方式暴露的内容
+import {PI,Person} from './module.js'
+// 使用暴露的Person类
+let person =new Person('张三',10)
+person.sayHello()
+// 使用暴露的属性
+console.log(PI)
+```
+
+# 三、前端工程化环境搭建
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

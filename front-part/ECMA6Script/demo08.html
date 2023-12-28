@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            //属性
+            #n;
+            age;
+            get name(){
+                return this.n;
+            }
+            set name(n){
+                this.n = n;
+            }
+            //实例方法
+            eat(food){
+                console.log(this.age+"岁的"+this.n+"用筷子吃"+food)
+            }
+            //静态方法
+            static sum(a,b){
+                return a+b
+            }
+            //构造器
+            constructor(name,age){
+                this.n = name;
+                this.age = age;
+            }
+        }
+        let person = new Person("张三",10)
+        //访问对象属性
+        //调用对象方法
+        console.log(person.name)
+        console.log(person.n)
+        person.name = "小明"
+        person.eat("火锅")
+        console.log(Person.sum(100,200))
+
+        class Student extends Person{
+            grade;
+            score;
+            study(){}
+            constructor(name,age){
+                super(name,age)
+            }
+        }
+        let stu = new Student("学生小李",19)
+        stu.eat("面条")
+        stu.grade = 2
+        console.log(stu.grade)
+    </script>
+</body>
+</html>
