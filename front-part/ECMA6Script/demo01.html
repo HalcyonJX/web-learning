@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.let只有在当前代码块有效
+        {
+            let a = 1
+            var b = 2
+        }
+        // console.log(a); // a is not defined
+        console.log(b); //可以输出
+        //2.不能重复声明
+        let name = '天真'
+        // let name = '无邪'
+        //3.不存在变量提升(先声明，再使用)
+        console.log(test) //可以，但是值为undefined
+        var test = 'test'
+        //console.log(test1) //不可以 let声明的变量一定要在声明后使用
+        let test1 = 'test1'
+        //4.不会成为window的属性
+        var a = 100
+        console.log(window.a) //100
+        let c = 200
+        console.log(window.c) //undefined
+        //5.循环中推荐使用
+        for(let i = 0;i < 10;i++){
+            console.log(i)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

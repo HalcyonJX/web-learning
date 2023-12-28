@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.参数列表中多个普通参数 普通函数和箭头函数中都支持
+        let fun1 = function(a,b,c,d=10){console.log(a,b,c,d)}
+        let fun2 = (a,b,c,d=10) => {console.log(a,b,c,d)}
+        fun1(1,2,3)
+        fun2(20,30,20,100)
+        //2...作为参数列表，称之为rest参数 普通函数和箭头函数中都支持，因为箭头函数中无法使用arguments，rest是一种解决方案
+        let fun3 = function(...args){console.log(args)}
+        let fun4 = (...args) => {console.log(args)}
+        fun3(1,2,34,5,32,2141,34)
+        fun4(13,23,421,45,21,221,21523,21456,434,21)
+        //只能有一个rest参数，放在最后
+        
+        let arr = [1,2,3]
+        let fun5 = (a,b,c) => {
+            console.log(a,b,c)
+        }
+        //调用方法时，对arr进行转换
+        fun5(...arr)
+        //应用场景1 合并数组
+        let arr2 = [4,5,6]
+        let arr3 = [...arr,...arr2]
+        console.log(arr3)
+        //应用场景2 合并对象属性
+        let p1 = {name:"藏三"}
+        let p2 = {age:10}
+        let p3 = {gender:"boy"}
+        let person = {...p1,...p2,...p3}
+        console.log(person)
+    </script>
+</body>
+</html>

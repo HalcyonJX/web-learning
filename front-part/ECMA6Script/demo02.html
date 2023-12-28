@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //声明场景语法，建议变量名大写
+        const PI = 3.1415926
+        //1.常量声明必须有初始化值
+        // const A; //报错
+        //2.常量值不可以改动
+        const A = 'zzz'
+        // A = 'xx'  //不可改动
+        //3.和let一样，分作用域
+        {
+            const A = 'zzj'
+            console.log(A) //zzj
+        }
+        //4.对应数组和对象元素修改，不算常量修改，修改值，不修改地址
+        const TEAM = ['周杰伦','吴彦祖','古天乐']
+        TEAM.push('郭富城')
+        // TEAM = [] //报错
+        console.log(TEAM)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

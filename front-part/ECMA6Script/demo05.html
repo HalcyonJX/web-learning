@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.函数声明
+        let fn1 = function(){}
+        let fn2 = ()=>{} //箭头函数
+        let fn3 = x =>{} //单参数可以胜率()，多参数无参不可以！
+        let fn4 = x => console.log(x) //只有一行方法体可以省略{}
+        let fn5 = x => x + 1 //当函数体只有一句返回值时，可以省略{}和return语句
+        //2.使用特点 箭头函数this关键字
+        //在 JavaScript 中，this 关键字通常用来引用函数所在的对象，
+        //或者在函数本身作为构造函数时，来引用新对象的实例。
+        //但是在箭头函数中，this 的含义与常规函数定义中的含义不同，
+        //并且是由箭头函数定义时的上下文来决定的，而不是由函数调用时的上下文来决定的。
+        //箭头函数没有自己的this，this指向的是外层上下文环境的this
+        let person = {
+            name:'张三',
+            showName:function(){
+                console.log(this) //这里的this是person
+                console.log(this.name)
+            },
+            viewName:()=>{
+                console.log(this) // 这里的this是window
+                console.log(this.name)
+            }
+        }
+        person.showName()
+        person.viewName()
+
+        //this的应用
+        function Counter(){
+            this.count = 0;
+            setInterval(() => { 
+                //这里的this是上一层作用域中的this，即Counter实例化对象
+                this.count++
+                console.log(this.count)
+            },1000)
+        }
+        let counter = new Counter()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
