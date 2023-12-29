@@ -7,10 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo03-filter" />
+        <module name="demo06-listener" />
+        <module name="demo07-listener" />
+        <module name="demo08-ajax" />
+        <module name="demo02-session" />
+        <module name="demo05-listener" />
         <module name="demo01-cookie" />
         <module name="demo04-filter" />
-        <module name="demo02-session" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo08-listener" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

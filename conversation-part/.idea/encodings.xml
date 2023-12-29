@@ -7,5 +7,15 @@
     <file url="file://$PROJECT_DIR$/demo03-filter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo04-filter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo04-filter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo05-listener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo05-listener/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo06-listener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo06-listener/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo07-listener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo07-listener/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo08-ajax/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo08-ajax/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo08-listener/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo08-listener/src/main/resources" charset="UTF-8" />
   </component>
 </project>

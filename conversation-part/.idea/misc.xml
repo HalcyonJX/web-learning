@@ -8,7 +8,17 @@
         <option value="$PROJECT_DIR$/demo02-session/pom.xml" />
         <option value="$PROJECT_DIR$/demo03-filter/pom.xml" />
         <option value="$PROJECT_DIR$/demo04-filter/pom.xml" />
+        <option value="$PROJECT_DIR$/demo05-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/demo06-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/demo07-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/demo08-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/demo08-ajax/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/demo08-listener/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="17" project-jdk-type="JavaSDK">
